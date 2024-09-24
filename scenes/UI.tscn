@@ -1,0 +1,55 @@
+[gd_scene load_steps=2 format=3 uid="uid://cbllxa7wt0t7q"]
+
+[ext_resource type="Script" path="res://scripts/ui_canvas_group.gd" id="1_ym63a"]
+
+[node name="UI CanvasGroup" type="CanvasGroup"]
+script = ExtResource("1_ym63a")
+
+[node name="SpinWheelButton" type="Button" parent="."]
+offset_left = 704.0
+offset_top = 544.0
+offset_right = 1088.0
+offset_bottom = 618.0
+text = "SPIN!"
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_left = 704.0
+offset_top = 64.0
+offset_right = 912.0
+offset_bottom = 192.0
+text = "option1, option2, option3, "
+placeholder_text = "Insert options separated by commas"
+wrap_mode = 1
+
+[node name="AddSegmentsButton" type="Button" parent="."]
+offset_left = 928.0
+offset_top = 64.0
+offset_right = 985.0
+offset_bottom = 140.0
+scale = Vector2(1.67923, 1.67923)
+text = "OK"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 704.0
+offset_top = 272.0
+offset_right = 744.0
+offset_bottom = 312.0
+scale = Vector2(5, 5)
+
+[node name="TheWinnerIs" type="RichTextLabel" parent="."]
+offset_left = 248.0
+offset_top = 552.0
+offset_right = 392.0
+offset_bottom = 592.0
+size_flags_vertical = 4
+text = "The winner is:"
+metadata/_edit_use_anchors_ = true
+
+[node name="WinnerLabel" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
+offset_left = 360.0
+offset_top = 552.0
+offset_right = 504.0
+offset_bottom = 592.0
+size_flags_vertical = 4
+metadata/_edit_use_anchors_ = true

@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://bqkqg2sdyv2d5"]
+
+[ext_resource type="Script" path="res://scripts/roulette.gd" id="1_plrsr"]
+[ext_resource type="Texture2D" uid="uid://dus6cj58fbhna" path="res://assets/circle.png" id="2_4ru41"]
+[ext_resource type="Texture2D" uid="uid://b0rt76mfrlj2k" path="res://assets/arrow.png" id="2_uec2v"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_suser"]
+blend_mode = 3
+
+[node name="SubViewportContainer" type="SubViewportContainer"]
+show_behind_parent = true
+offset_top = 168.0
+offset_right = 512.0
+offset_bottom = 680.0
+script = ExtResource("1_plrsr")
+
+[node name="arrow" type="Sprite2D" parent="."]
+position = Vector2(528, 240)
+rotation = 6.28318
+scale = Vector2(0.970329, 0.970329)
+texture = ExtResource("2_uec2v")
+
+[node name="SubViewport" type="SubViewport" parent="."]
+transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 4
+
+[node name="Roulette CanvasGroup" type="CanvasGroup" parent="SubViewport"]
+position = Vector2(237.137, 237.137)
+scale = Vector2(1.38889, 1.38889)
+
+[node name="Mask" type="Sprite2D" parent="SubViewport/Roulette CanvasGroup"]
+clip_children = 2
+z_index = 1
+z_as_relative = false
+material = SubResource("CanvasItemMaterial_suser")
+position = Vector2(1.52588e-05, 0)
+scale = Vector2(1.2172, 1.2172)
+texture = ExtResource("2_4ru41")

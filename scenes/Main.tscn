@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=3 uid="uid://cr0ckepl338h"]
+
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_du0yn"]
+[ext_resource type="PackedScene" uid="uid://cbllxa7wt0t7q" path="res://scenes/UI.tscn" id="2_25ytf"]
+[ext_resource type="PackedScene" uid="uid://bqkqg2sdyv2d5" path="res://scenes/Roulette.tscn" id="3_5s2ck"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_du0yn")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+z_index = -1
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(28.8, 16.2)
+color = Color(0, 0, 0, 1)
+
+[node name="UICanvasGroup" parent="Control" instance=ExtResource("2_25ytf")]
+unique_name_in_owner = true
+position = Vector2(20, 20)
+
+[node name="Roulette" parent="Control" instance=ExtResource("3_5s2ck")]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 128.0
+offset_top = 572.0
+offset_right = 640.0
+offset_bottom = 1084.0
+rotation = -1.57079
+scale = Vector2(0.957526, 0.957526)

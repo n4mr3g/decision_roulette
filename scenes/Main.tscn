@@ -16,7 +16,7 @@ grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 
-[node name="ColorRect" type="ColorRect" parent="Control"]
+[node name="Background" type="ColorRect" parent="Control"]
 z_index = -1
 layout_mode = 0
 offset_right = 40.0
@@ -30,6 +30,7 @@ position = Vector2(20, 20)
 
 [node name="Roulette" parent="Control" instance=ExtResource("3_5s2ck")]
 unique_name_in_owner = true
+visible = false
 layout_mode = 0
 offset_left = 128.0
 offset_top = 572.0

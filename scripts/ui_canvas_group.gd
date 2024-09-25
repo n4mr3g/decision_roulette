@@ -1,6 +1,8 @@
 extends CanvasGroup
 
+@warning_ignore("unused_signal")
 signal add_segments_pressed(labels)
+@warning_ignore("unused_signal")
 signal spin_wheel_pressed()
 
 @onready var text_edit = $TextEdit

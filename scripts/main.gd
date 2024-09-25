@@ -17,11 +17,12 @@ func _process(delta):
 
 func update_winner_label(winner_text: String):
 	if winner_label && winner_label.text != winner_text:
-		winner_label.text = winner_text
+		winner_label.text = "The winner is... " + winner_text
 		
 func _on_add_segments_pressed(labels):
 	roulette.populate_labels(labels)
 	roulette.create_segments(labels.size())
+	roulette.visible = true
 
 func _on_spin_wheel_pressed():
 	roulette.spin_wheel()

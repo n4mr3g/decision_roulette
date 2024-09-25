@@ -13,14 +13,9 @@ var is_spinning = false
 
 signal winner_detected(winner_text: String)
 
-#func _ready():
-	#populate_labels()  # Populate the labels array
-	#create_segments(segment_count)  # Create segments after labels are populated
-
 func populate_labels(labels_from_user):
-	labels.clear()  # Clear existing labels
+	labels.clear() 
 	
-	# Populate labels from user input or define them directly
 	for label in labels_from_user:
 		labels.append(label)
 
@@ -29,21 +24,15 @@ func get_current_winner_segment() -> String:
 	if segment_count == 0:
 		return ""
 
-	# Adjust the current angle based on clockwise direction
-	#var adjusted_angle = current_angle + (360.0 / segment_count)
-	#adjusted_angle = wrapf(adjusted_angle, 0, 360)  # Ensure it's between 0 and 360
 
 	var angle_step = 360.0 / segment_count
-	var segment_index = int(floor(current_angle / angle_step))  # Direct mapping without adjustments
+	var segment_index = int(floor(current_angle / angle_step))
 
 	# Ensure the index is valid
 	if segment_index >= 0 and segment_index < labels.size():
 		return labels[segment_index]
 	return ""
 
-	#Nota: el problema es que la 'flecha' siempre esta ubicada al final del segmento 1.
-	#Nota: el problema es que la 'flecha' siempre esta ubicada al final del segmento 1.
-	#Nota: el problema es que la 'flecha' siempre esta ubicada al final del segmento 1.
 
 
 func get_color_for_segment(index: int, total: int) -> Color:
@@ -88,24 +77,17 @@ func create_segments(amount_to_create: int):
 		if i < labels.size():
 			var label = create_label(labels[i], angle + angle_step / 2)  # Position in the center of the segment
 			canvas.add_child(label)
-		else:
-			# Optional: Add a placeholder label if no label is defined for the segment
-			var label = create_label("Segment " + str(i + 1), angle + angle_step / 2)
-			canvas.add_child(label)
 
 func create_label(text: String, angle: float) -> Label:
 	var label = Label.new()
 	label.text = text
 	label.set_custom_minimum_size(Vector2(50, 20))
 
-	# Set Z index to 1
 	label.z_index = 1
-	
-		# Add shadow to simulate an outline (black color)
 	label.add_theme_constant_override("outline_size", 5)
 	
 	# Rotate to face outward
-	label.rotation = deg_to_rad(angle + 0)  # Adjust rotation to face outward
+	label.rotation = deg_to_rad(angle)
 
 	# Calculate the position based on the angle and an offset
 	var distance_from_center = wheel_radius - 100  # Distance from the center to position the label

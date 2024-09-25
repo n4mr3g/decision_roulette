@@ -37,6 +37,7 @@ offset_bottom = 312.0
 scale = Vector2(5, 5)
 
 [node name="TheWinnerIs" type="RichTextLabel" parent="."]
+visible = false
 offset_left = 248.0
 offset_top = 552.0
 offset_right = 392.0
@@ -47,9 +48,10 @@ metadata/_edit_use_anchors_ = true
 
 [node name="WinnerLabel" type="RichTextLabel" parent="."]
 unique_name_in_owner = true
-offset_left = 360.0
+offset_left = 260.0
 offset_top = 552.0
-offset_right = 504.0
+offset_right = 404.0
 offset_bottom = 592.0
+scale = Vector2(1.16818, 0.880165)
 size_flags_vertical = 4
 metadata/_edit_use_anchors_ = true

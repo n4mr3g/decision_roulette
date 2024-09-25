@@ -14,6 +14,8 @@ func _process(delta):
 	var current_winner = roulette.get_current_winner_segment()
 	if current_winner != "":
 		update_winner_label(current_winner)
+		
+	
 
 func update_winner_label(winner_text: String):
 	if winner_label && winner_label.text != winner_text:

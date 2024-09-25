@@ -38,6 +38,7 @@ scale = Vector2(5, 5)
 
 [node name="TheWinnerIs" type="RichTextLabel" parent="."]
 visible = false
+visible = false
 offset_left = 248.0
 offset_top = 552.0
 offset_right = 392.0
@@ -48,10 +49,15 @@ metadata/_edit_use_anchors_ = true
 
 [node name="WinnerLabel" type="RichTextLabel" parent="."]
 unique_name_in_owner = true
-offset_left = 260.0
-offset_top = 552.0
-offset_right = 404.0
-offset_bottom = 592.0
-scale = Vector2(1.16818, 0.880165)
-size_flags_vertical = 4
+clip_contents = false
+offset_left = 244.0
+offset_top = 550.0
+offset_right = 388.0
+offset_bottom = 590.0
+size_flags_horizontal = 3
+size_flags_vertical = 6
+size_flags_stretch_ratio = 0.0
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
 metadata/_edit_use_anchors_ = true

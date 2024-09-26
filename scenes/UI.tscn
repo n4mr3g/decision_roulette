@@ -38,7 +38,6 @@ scale = Vector2(5, 5)
 
 [node name="TheWinnerIs" type="RichTextLabel" parent="."]
 visible = false
-visible = false
 offset_left = 248.0
 offset_top = 552.0
 offset_right = 392.0
